@@ -1,18 +1,14 @@
-/* el asterisco para resetear */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
- 
+
 body {
-  background-color: #eeeee;
-  height: 2000px;
+  background-color: #eee;
   font-family: 'Lato', sans-serif;
 }
 
-
-/* elimina el subrayado en los enlaces */
 a {
   text-decoration: none;
 }
@@ -47,7 +43,7 @@ ul {
 
 .header__content-title:hover::after {
   content: 'inicio';
-  color:#e2e8f0;
+  color: #e2e8f0;
   font-size: 15px;
   margin-left: 5px;
 }
@@ -58,17 +54,17 @@ ul {
 }
 
 .header__content-navbar a {
-  margin: 0 15px;
-  color:#e2e8f0;
+  color: #e2e8f0;
   font-weight: bold;
-  transition: .3s;
+  transition: color 0.3s;
 }
 
 .header__content-navbar a:hover {
-  color:#22c55e;
+  color: #22c55e;
 }
 
-.header__content-navbar LI {
+.header__content-navbar li {
+  margin: 0 15px;
   transition: transform 0.3s;
 }
 
@@ -79,7 +75,7 @@ ul {
 }
 
 .header__content-navbar li:active {
-  transform: scale(.9)
+  transform: scale(0.9);
 }
 
 .whatsapp {
@@ -88,13 +84,13 @@ ul {
   right: 20px;
 }
 
-/* tarjetas */
+/* TARJETAS */
 .card {
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 60%);
-  transition: transform .3s;
+  transition: transform 0.3s;
 }
 
 .card:hover {
@@ -122,6 +118,7 @@ ul {
   font-weight: bold;
   font-size: 16px;
   transition: background-color 0.3s;
+  position: relative;
 }
 
 .card__link:hover {
@@ -130,8 +127,8 @@ ul {
 
 .card__link:hover::after {
   content: '\276F';
-  position:absolute;
-  right: 1px;
+  position: absolute;
+  right: 20px;
 }
 
 .card__header-img {
@@ -146,14 +143,19 @@ ul {
 
 .card__header-tag {
   padding: 8px;
-  color:#ffffff;
-  background-color: rgba(255, 255, 255, 30%);
-  position:absolute;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 50%);
+  position: absolute;
   right: 0;
   border-bottom-left-radius: 10px;
 }
 
-/* cursos */
+.card__header-tag--strong {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* CURSOS */
 .courses {
   margin-top: 60px;
   padding: 0 20px;
@@ -174,17 +176,17 @@ ul {
 }
 
 /* ESTADISTICAS */
-.stadistics {
+.statistics {
   margin-top: 80px;
   padding: 100px 20px;
-  background-image: url("./assets/images/bg.jpg");
+  background-image: url('./assets/images/bg.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
 
-.stadistics__content {
+.statistics__content {
   color: #e2e8f0;
   display: flex;
   justify-content: space-between;
@@ -192,25 +194,25 @@ ul {
   margin: 0 auto;
 }
 
-.stadistics__content-data {
+.statistics__content-data {
   font-size: 40px;
   text-align: center;
 }
 
-.stadistics__content-data span {
+.statistics__content-data span {
   display: block;
   font-size: 20px;
   margin-top: 5px;
 }
 
-/* MOBILE LAST */
+/* MOBILE LAST (BP de mayor a menor) */
 @media (max-width: 992px) {
   .courses__content {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width:768px ) {
+@media (max-width: 768px) {
   .header__content-navbar {
     display: none;
   }
@@ -221,11 +223,11 @@ ul {
     grid-template-columns: 1fr;
   }
 
-  .stadistics__content {
+  .statistics__content {
     flex-direction: column;
   }
 
-  .stadistics__content-data {
+  .statistics__content-data {
     margin: 30px 0;
   }
 }
